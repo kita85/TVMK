@@ -41,7 +41,7 @@ h3 {
 }
 a {
     color: {{site.primary-color}};
-    text-decoration: underline;
+    text-decoration: none;
 }
 a:visited {
     color: {{site.secondary-color}}; // This may need to be changed
@@ -124,6 +124,11 @@ li.nav-link.dropdown-toggle {
 li.nav-link {
     position: relative!important;
 }
+.logo-icon {
+    height: 50px;
+    width: 150px;
+    margin: 8px 0;
+}
 //** 
 //* FOOTER 
 //**
@@ -131,13 +136,15 @@ li.nav-link {
     background-color: {{site.dark-color}};
     color: white;
 }
-.site-footer img {
-    max-height: 40px!important;
-    margin: 20px auto;
-    display: block;
-}
-img.nnsa-logo {
-    max-height: 75px!important;
+// .site-footer img {
+//     // max-height: 40px!important;
+//     margin: 20px auto;
+//     display: block;
+// }
+.socials img {
+    height: 32px;
+    display: inline;
+    margin: 10px 5px 0 0;
 }
 //** 
 //* BANNER 
@@ -149,14 +156,16 @@ img.nnsa-logo {
 .banner h2 {
     font-weight: bold;
     letter-spacing: 1px;
+    font-size: 40px;
 }
 .banner img {
-    margin: 0 auto;
     position: relative;
     display: block;
-    border: 15px solid #bed7d6;
+    border: 10px solid #bed7d6;
     border-radius: 1000px;
-    width: 100%;
+    width: 450px;
+    height: 450px;
+    float: right;
 }
 .banner-text {
     transition: .4s;
@@ -206,6 +215,9 @@ ul.pagination {
 .mission .card-body {
     padding: 0px;
 }
+.mission img {
+    border-radius: 10px;
+}
 
 //** 
 //* GRIDS
@@ -231,4 +243,45 @@ ul.pagination {
 .announcement-list {
     background-color: whitesmoke;
     padding: 20px 30px;
+}
+
+
+.boxes .col-lg {
+    border: 3px solid #bed7d6;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 10px;
+}
+.solid-block {
+    background-color: #bed7d6;
+    border-radius: 10px;
+    padding: 20px;
+}
+.subtitle {
+    color: #4f7a79;
+    // color: #1d8884;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.solid-block img {
+    height: 32px;
+    margin: 0px 10px 0 0;
+}
+.solid-block h4{
+    border-bottom: 2px solid #96b9b88f;
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+    color: #304f4e;
+}
+.site-footer ul {
+    list-style: none;
+    margin-left: 0px;
+}
+h5 {
+    letter-spacing: 1px;
+}
+.site-footer .site-desc {
+    color: #bed7d6;
+    font-weight: bold;
 }
