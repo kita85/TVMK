@@ -136,15 +136,13 @@ li.nav-link {
     background-color: {{site.dark-color}};
     color: white;
 }
-// .site-footer img {
-//     // max-height: 40px!important;
-//     margin: 20px auto;
-//     display: block;
-// }
 .socials img {
     height: 32px;
     display: inline;
     margin: 10px 5px 0 0;
+}
+.site-footer img.logo {
+    max-height: 150px;
 }
 //** 
 //* BANNER 
