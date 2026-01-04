@@ -37,7 +37,7 @@ article {
 //* TYPOGRAPHY 
 //**
 h3 {
-    color: #589390;
+    color: #306361;
 }
 a {
     color: {{site.primary-color}};
@@ -129,12 +129,14 @@ li.nav-link {
     margin: 8px 0;
 }
 .logo-text {
-    font-size: 31px;
+    font-size: 25px;
     padding: 12px;
     font-weight: bold;
     height: 50px;
     vertical-align: middle;
+    letter-spacing: 1.2px;
     color: rgb(233, 147, 179);
+    color: rgb(46, 46, 46);
 }
 //** 
 //* FOOTER 
