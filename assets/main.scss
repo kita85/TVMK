@@ -37,7 +37,7 @@ article {
 //* TYPOGRAPHY 
 //**
 h3 {
-    color: {{site.primary-color}};
+    color: #589390;
 }
 a {
     color: {{site.primary-color}};
@@ -126,8 +126,15 @@ li.nav-link {
 }
 .logo-icon {
     height: 50px;
-    width: 150px;
     margin: 8px 0;
+}
+.logo-text {
+    font-size: 31px;
+    padding: 12px;
+    font-weight: bold;
+    height: 50px;
+    vertical-align: middle;
+    color: rgb(233, 147, 179);
 }
 //** 
 //* FOOTER 
@@ -282,4 +289,55 @@ h5 {
 .site-footer .site-desc {
     color: #bed7d6;
     font-weight: bold;
+}
+//** 
+//* MEETINGS PAGE 
+//**
+.meeting-hero {
+    background: linear-gradient(135deg, {{site.primary-color}} 0%, {{site.secondary-color}} 100%);
+    padding: 60px 0;
+    margin: -25px 0 0 0;
+}
+.meeting-hero h2 {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.meeting-hero .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.contact-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+.contact-card h4 svg {
+    vertical-align: top;
+}
+.contact-card .contact-info {
+    border-left: 3px solid #96b9b88f;
+    padding-left: 15px;
+}
+.contact-card .btn {
+    font-weight: 500;
+}
+.highlight-block {
+    border-left: 4px solid {{site.primary-color}};
+}
+
+// Mobile responsive improvements for meetings page
+@media only screen and (max-width: 991px) {
+    .meeting-hero {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .meeting-hero h2 {
+        font-size: 28px;
+    }
+    .contact-card {
+        margin-top: 20px;
+    }
 }
