@@ -321,8 +321,8 @@ a.nav-link:hover {
     }
     .foreground-circle-img {
         float: none!important;
-        left: calc(50% - 225px);
-        position: relative!important;
+        position: static!important;
+        margin: auto;
     }
 }
 //**
