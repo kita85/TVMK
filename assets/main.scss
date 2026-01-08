@@ -102,44 +102,218 @@ button.btn.btn-outline a:visited {
 }
 
 //** 
+//** 
 //* HEADER 
 //**
-.site-nav {
-    line-height: initial;
+.site-header {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 15px 0;
 }
-a.nav-link {
-    color: black;
-    padding: 1rem!important;
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
-a.nav-link:hover {
-    color: {{site.primary-color}};
+
+.logo-link:hover {
+    text-decoration: none;
 }
-li.nav-link.dropdown-toggle {
-    padding: 1rem !important;
-}
-.dropdown-toggle:hover .dropdown-menu {
-    display: block!important;
-}
-li.nav-link {
-    position: relative!important;
-}
+
 .logo-icon {
     height: 50px;
-    margin: 8px 0;
+    margin-right: 10px;
 }
+
 .logo-text {
     font-size: 25px;
-    padding: 12px;
     font-weight: bold;
-    height: 50px;
-    vertical-align: middle;
     letter-spacing: 1.2px;
-    color: rgb(233, 147, 179);
     color: rgb(46, 46, 46);
 }
-//** 
-//* FOOTER 
+
+.site-nav {
+    position: relative;
+}
+
+.nav-trigger {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon svg {
+    fill: #424242;
+}
+
+// Desktop navigation
+.trigger {
+    display: block;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    margin: 0 10px;
+    position: relative;
+}
+
+a.nav-link {
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+a.nav-link:hover {
+    color: {{site.primary-color}};
+    text-decoration: none;
+}
+
+// Dropdown styles
+.dropdown .nav-link {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    padding: 10px 15px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: {{site.light-color}};
+    color: {{site.primary-color}};
+}
+
+// Mobile styles
+@media screen and (max-width: 600px) {
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .header-content {
+        position: relative;
+    }
+
+    .logo-icon {
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .trigger {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        min-width: 250px;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .nav-trigger:checked ~ .trigger {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    a.nav-link {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    // Mobile dropdown
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: #f9f9f9;
+        display: none;
+        padding-left: 20px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none; // Disable hover on mobile
+    }
+
+    // Simple click-to-expand for mobile dropdowns
+    .nav-trigger:checked ~ .trigger .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown .dropdown-toggle {
+        display: block;
+        padding: 15px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown-menu a {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
 //**
 .site-footer {
     background-color: {{site.dark-color}};
@@ -341,5 +515,138 @@ h5 {
     }
     .contact-card {
         margin-top: 20px;
+    }
+}
+
+//** 
+//* ADDITIONAL MOBILE IMPROVEMENTS
+//**
+@media screen and (max-width: 768px) {
+    // General mobile improvements
+    .wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    // Mission card mobile
+    .mission.card {
+        margin-top: 30px;
+        padding: 20px 25px;
+    }
+
+    .mission .row {
+        flex-direction: column;
+    }
+
+    .mission .col-lg,
+    .mission .col-lg-4 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .mission .col-lg-4 {
+        margin-top: 20px;
+    }
+
+    .mission img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    // Typography mobile
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    // Buttons mobile
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    // Forms and inputs
+    input, textarea, select {
+        font-size: 16px; // Prevents zoom on iOS
+    }
+
+    // Footer mobile
+    .site-footer {
+        padding: 30px 0;
+    }
+
+    .site-footer .wrapper {
+        padding: 0 15px;
+    }
+}
+
+
+//** 
+//* MOBILE MENU FIX - Higher specificity
+//**
+@media screen and (max-width: 600px) {
+    .site-nav label[for=nav-trigger] {
+        display: block !important;
+        float: right;
+        width: 34px;
+        height: 36px;
+        z-index: 2;
+        cursor: pointer;
+        margin-bottom: 0px;
+    }
+
+    // Force hide menu by default
+    .site-nav .trigger {
+        display: none !important;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        min-width: 250px;
+        max-width: 90vw;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    // Show menu when checkbox is checked
+    .site-nav .nav-trigger:checked ~ .trigger {
+        display: block !important;
+    }
+
+    // Make sure hamburger is visible
+    .site-nav .menu-toggle {
+        display: block !important;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;
+    }
+
+    // Make sure checkbox is hidden
+    .site-nav .nav-trigger {
+        display: none !important;
+    }
+
+    // Stack menu items vertically
+    .site-nav .navbar-nav {
+        flex-direction: column !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .site-nav .nav-item {
+        width: 100%;
+        display: block;
+    }
+
+    .site-nav a.nav-link {
+        padding: 15px 20px !important;
+        border-bottom: 1px solid #f0f0f0;
+        display: block;
     }
 }
