@@ -313,6 +313,17 @@ a.nav-link:hover {
         padding: 12px 20px;
         font-size: 14px;
     }
+    .col-lg-7.pl-4 {
+        padding: 40px 0 0 0 !important;
+    }
+    .background-circle-img {
+        display: none!important;
+    }
+    .foreground-circle-img {
+        float: none!important;
+        left: calc(50% - 225px);
+        position: relative!important;
+    }
 }
 //**
 .site-footer {
