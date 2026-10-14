@@ -45,8 +45,8 @@ favicon: "/assets/img/150.png"
 
 navbar-links:
   Home: ""
-  Our Meetings: "meetings"
-  Seminar: "seminar"
+  Meetings: "meetings"
+  2027 Seminar: "seminar"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 primary-color: "#bed7d6"

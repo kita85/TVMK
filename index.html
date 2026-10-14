@@ -2,84 +2,67 @@
 layout: default
 ---
 
-<div class="home">
+<!-- Welcome -->
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <span class="label">Knitting together since 1990</span>
+      <h1>Welcome to the Tennessee Valley Machine Knitters</h1>
+      <p class="muted" style="margin: 0 0 32px">We are a friendly club for anyone who loves machine knitting. We share ideas, learn new techniques, help each other with knitting problems, and show off what we make.</p>
+      <div class="btn-row">
+        <a class="btn btn-main" href="{{ site.baseurl }}/meetings">Come to a meeting</a>
+        <a class="btn btn-dark" href="{{ site.baseurl }}/seminar">See the 2027 Seminar</a>
+      </div>
+    </div>
+    <img class="hero-photo" src="{{ site.baseurl }}/assets/img/main.jpg" alt="A knitting machine with a cone of pink yarn">
+  </div>
+</section>
 
-  <div class="banner">
-    <!-- <img class="w-100" src="https://via.placeholder.com/1000x350"> -->
-    <div class="wrapper">
-      <div class="row m-0">
-        <div class="col-lg-5 pr-4">
-          <div class="banner-text">
-            <div class="sq-border">
-                <h2 class="w-100">Tennessee Valley Machine Knitters</h2>
-            </div>
-            <br>
-            <p>Welcome to our machine knitting community! Here, we aim to share ideas and expertise while learning new techniques through engaging programs and seminars. Our fellowship fosters a supportive environment where we encourage one another, solve common knitting problems, and showcase our creations.</p>
-            <a href="{{ site.baseurl }}/meetings"> 
-              <button class="btn btn-primary">Join us at a meeting</button>
-            </a>
-           </div>
-        </div>
-        <div class="col-lg-7 pl-4">
-            <img class="background-circle-img" src="{{ site.baseurl }}/assets/img/knit.jpg" alt="Colorful machine knitted fabric">
-            <img class="foreground-circle-img position-absolute" src="{{ site.baseurl }}/assets/img/main.jpg" alt="Machine knitting in progress">
-        </div>
+<!-- Seminar -->
+<section class="section section-white">
+  <div class="wrap badge-row">
+    <div class="date-badge" aria-hidden="true">
+      <span class="month">APRIL</span>
+      <span class="days">3–4</span>
+      <span class="year">2027</span>
+    </div>
+    <div>
+      <span class="label">Save the date</span>
+      <h2>The 2027 Seminar with Sara Etchinson</h2>
+      <p class="muted" style="margin: 0 0 12px">Saturday and Sunday, April 3 and 4, 2027, at the Grand Smokies Resort Lodge in Pigeon Forge. Lunch is included, and the Fashion Show is back.</p>
+      <p class="muted" style="margin: 0 0 28px">Registration forms will be sent in January 2027.</p>
+      <a class="btn btn-main" href="{{ site.baseurl }}/seminar">See seminar details</a>
+    </div>
+  </div>
+</section>
+
+<!-- What we do -->
+<section class="section">
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="muted" style="margin: 0 0 40px">We help each other make the most of our machines, share where to find good materials, and knit for our community.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Learn something new</h3>
+        <p class="muted">Programs at our meetings and a seminar with a guest demonstrator.</p>
+      </div>
+      <div class="card">
+        <h3>Get help with problems</h3>
+        <p class="muted">Bring a tricky project to Trouble-Shooting Tuesday and we'll work it out together.</p>
+      </div>
+      <div class="card">
+        <h3>Give back</h3>
+        <p class="muted">We knit for charity and community projects.</p>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="wrapper">
-    {%- if page.title -%}
-        <h1 class="page-heading">{{ page.title }}</h1>
-    {%- endif -%}
-
-    <div class="mission card mb-4">
-        <div class="card-header">
-            
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-lg">
-                    <img src="{{ site.baseurl }}/assets/img/knitmachine.jpg" alt="Brother knitting machine with colorful yarn">
-                </div>
-                <div class="col-lg-4 pl-4">
-                    <h2 class="mb-0">About Us</h2>
-                    <p class="subtitle">Since 1990</p>
-                    <p>We believe in giving back to the community through meaningful projects and stimulating machine owners to make the most of their tools. Additionally, we facilitate the exchange of source information for obtaining materials. Join us as we knit together, learn from each other, and celebrate our passion for machine knitting!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- <div class="row mt-5 mb-5 boxes">
-        <div class="col-lg">
-            <h3>Charitys</h3>
-            <ul>
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
-                <li>four</li>
-            </ul>
-        </div>
-        <div class="col-lg">
-            <h3>Projects</h3>
-            <ul>
-                <li>Scarf Around Town</li>
-                <li>Opossoms</li>
-                <li>Hats, Scarfs, Shaws</li>
-                <li>and More</li>
-            </ul>
-        </div>
-        <div class="col-lg">
-            <h3>Lessons</h3>
-            <ul>
-                <li>Celtic Knots</li>
-                <li>Blankets</li>
-                <li>Garder Bar</li>
-                <li>and More</li>
-            </ul>
-        </div>
-    </div> -->
-
-  </div> <!-- end wrapper-->
-</div>
+<!-- Join -->
+<section class="section section-teal">
+  <div class="wrap">
+    <h2>Thinking about joining?</h2>
+    <p class="muted" style="margin: 0 0 28px">You don't need to own a machine. Come to up to two meetings first and see if the club is right for you.</p>
+    <a class="btn btn-main" href="mailto:{{ site.email }}">Email us: {{ site.email }}</a>
+  </div>
+</section>
