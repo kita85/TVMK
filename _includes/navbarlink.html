@@ -1,16 +1,8 @@
-{% capture before %}{{ include.link[1] | split: "://" | first }}{% endcapture %}
-{% capture after %}{{ include.link[1] | split: "://" | last }}{% endcapture %}
-{% assign internal = true %}
-{% if before != after %}
-  {% if before == "http" or before == "https" %}
-    {% assign internal = false %}
-  {% endif %}
-{% endif %}
-
-{% if internal %}
-  {% capture linkurl %}{{ site.baseurl }}/{{ include.link[1] }}{% endcapture %}
-{% else %}
-  {% capture linkurl %}{{ include.link[1] }}{% endcapture %}
-{% endif %}
-
+{%- capture linkurl -%}{{ site.baseurl }}/{{ include.link[1] }}{%- endcapture -%}
+{%- capture linkurl_slash -%}{{ linkurl }}/{%- endcapture -%}
+{%- assign current_url = page.url | remove: "index.html" -%}
+{%- if current_url == linkurl or current_url == linkurl_slash -%}
+<a class="nav-link active" href="{{ linkurl }}" aria-current="page">{{ include.link[0] }}</a>
+{%- else -%}
 <a class="nav-link" href="{{ linkurl }}">{{ include.link[0] }}</a>
+{%- endif -%}
